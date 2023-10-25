@@ -72,64 +72,99 @@
 #    "Cat" : "Kittens",
 #    "Lion" : "Cub",
 #    "Peacock" : "Peahen"
-# }
-# print(animals.setdefault("Lion", "Baby Lion"))
-# ## this won't allow you to change Lion as it already exists as a Key in the Directory with a Value
-# animals.setdefault("Pig", "Piglet")
-# ## this will add a new item and allows as not in the Directory
-# print(animals)
-
-# # animals.update({"Fish" : "Fry", "Cow" : "Calf"})
-# # ## .updates merges 2 Dictionaries into 1
+# # }
+# # print(animals.setdefault("Lion", "Baby Lion"))
+# # ## this won't allow you to change Lion as it already exists as a Key in the Directory with a Value
+# # animals.setdefault("Pig", "Piglet")
+# # ## this will add a new item and allows as not in the Directory
 # # print(animals)
 
-# # animals.update({"Lion" : "Baby Lion"})
-# # ## will update the original Dictionary
+# # # animals.update({"Fish" : "Fry", "Cow" : "Calf"})
+# # # ## .updates merges 2 Dictionaries into 1
+# # # print(animals)
 
-# animals.pop("Peacock")
-# print(animals)
-# ## this removes that Key & it's Value from the list
+# # # animals.update({"Lion" : "Baby Lion"})
+# # # ## will update the original Dictionary
 
-# animals.popitem()
-# ## this removes the last item from the list
+# # animals.pop("Peacock")
+# # print(animals)
+# # ## this removes that Key & it's Value from the list
+
+# # animals.popitem()
+# # ## this removes the last item from the list
 
 
-## Challenge 1
-artist_songs = {
-    "Madonna" : "Papa Don't Preach",
-    "Adele" : "Rolling in The Deep",
-    "Amy Winehouse" : "Rehab",
-    "Lady Gaga" : "Poker Face",
-    "Pink Floyd" : "Another Brick in the Wall"
-}
-print(artist_songs)
+# ## Challenge 1
+# artist_songs = {
+#     "Madonna" : "Papa Don't Preach",
+#     "Adele" : "Rolling in The Deep",
+#     "Amy Winehouse" : "Rehab",
+#     "Lady Gaga" : "Poker Face",
+#     "Pink Floyd" : "Another Brick in the Wall"
+# }
+# print(artist_songs)
 
-## add 2 new items to Dictionary
-artist_songs.update({"London Grammar" : "Strong", "Portishead" : "Glory Box"})
-print(artist_songs)
+# ## add 2 new items to Dictionary
+# artist_songs.update({"London Grammar" : "Strong", "Portishead" : "Glory Box"})
+# print(artist_songs)
 
-## Challenge 1 Stretch
-## Print fav song using 'for loop'
-###***** STILL TO DO********** 
+# ## Challenge 1 Stretch
+# ## Print fav song using 'for loop'
+# ###***** STILL TO DO********** 
+# list_of_songs = [
+#     "A", "B", "C"
+# ]
+# print(artist_songs.keys())
+# print(artist_songs.values())  
+# print(artist_songs.items()) #gives full key/value list
+# for k,v in artist_songs.items():
+#     print(f"Artist: {k}" - Song: {v")
+# ## need to work on line 121 as not working
 
-##Challenge 2
-##Create Dictonary where country is Key and Language is Value
-countries = ["England", "Spain", "Ethiopia", "Iran"]
 
-languages = ["English", "Spanish", "Amharic", "Farsi"]
-my_dict=dict(zip(countries, languages))
-print(my_dict)
-## Zip function combines two lists into a dictionary
 
-##Challenge 3
+
+
+
+# ##Challenge 2
+# ##Create Dictonary where country is Key and Language is Value
+# countries = ["England", "Spain", "Ethiopia", "Iran"]
+
+# languages = ["English", "Spanish", "Amharic", "Farsi"]
+# my_dict=dict(zip(countries, languages))
+# print(my_dict)
+# ## Zip function combines two lists into a dictionary
+
+# ##Challenge 3
 ## from animal Dictionary, allow user to search for an animal and see the corresponding young name. If does not exist return a suitable message
+# animals = {
+#     "Dog" : "Puppy",
+#     "Cat" : "Kittens",
+#     "Lion" : "Cub",
+#     "Peacock" : "Peahen"
+# }
+# animal_of_choice= input("What animal would you like to serach?").capitalize() 
+# print(animals.get(animal_of_choice, "We couldn't find a baby animal for that parent"))
+## you need to only give it 1 parameter, as the below would give "None. We couldn't find a baby animal for that parent", as you are giving it 2 parameters in the below.
+##None Issue with this formula (above to correct); print(animals.get(animal_of_choice), "We couldn't find a baby animal for that parent"))
+###### *******add in > to line 146 at end to give user space
+
+
+##Challenge 4
+## Create animal dictionary which allows user to submit an animal and baby name.
+## If already exists, return existing baby name 
+## if not, add to dictionary
+
+
 animals = {
     "Dog" : "Puppy",
     "Cat" : "Kittens",
     "Lion" : "Cub",
     "Peacock" : "Peahen"
 }
-animal_of_choice= input("What animal would you like to serach?")
-print(animals.get(animal_of_choice, "We couldn't find a baby animal for that parent"))
-## you need to only give it 1 parameter, as the below would give "None. We couldn't find a baby animal for that parent", as you are giving it 2 parameters in the below.
-##print(animals.get(animal_of_choice), "We couldn't find a baby animal for that parent"))
+print("What animal would you like to add to the dictionary?")
+##WRONG UPDATE - additional_animal = input
+##WRONG UPDATE - if input != animals("That animal already exits")
+##WRONG UPDATE - (animals.get("{}"), ("What is the baby name to that animal?"))
+
+
