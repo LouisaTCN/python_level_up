@@ -120,11 +120,14 @@ print(random_list)
 # Activity 5
 # Create a programe which takes the users input and if number turns it into a number turn into a interger
 # If is String then make the string uppercase
-# check if input is number or string
-print("Hello how old are you?")
-age = input
-isnumberic(age)
-
+# # check if input is number or string
+while True:
+  age=input("How old are you?")
+  try:
+  val = int(input) #Convert it into integer
+  print("Input is an integer number. Number = ", val)
+  except ValueError:
+  print("No.. input is not a number. It's a string").upper
 
 
 
@@ -133,7 +136,34 @@ isnumberic(age)
 # Acitivity 6
 # Create Hide & Seek Programme - see slide
 # User should be able enter their name and pick hiding place form a list
+# Program should then count out 10 seconds and try to find user
+# Programe shoud be allowed 5 attempts
+# put pause between each attempt 
 
+# import time
+# hiding_places=["wardrobe", "cupboard", "under stairs", "behind shower curtain", "under bed"]
+# user_name = input("What is your name?")
+# print(f"Hello {user_name}, lets play hide and seek!")
+# print("Where would you like to hide?")  
+# for i in hiding_places:
+#   print (i)
+# hidden_place = input("Please type your hiding place: ")
+# print(f"You have 10 seconds to hide")
 
+# start_time = time.time()
+# for i in range(1,11): # counts to 10
+#   print(i)
+#   time.sleep(1) # counts down by 1 second
+# print("Ready or not here I come!")
+# for x in range (1,6): # Loop added to allow 5 tries
+    
+#   hiding_places_hidden=random.choice(hiding_places)
+#   print(f"Is {hiding_places_hidden} your hiding place")
+#   user_hiding_place = input("Please say Yes or No: ")
 
-# put pause between each attempt - a pause
+#   if user_hiding_place=="Yes":
+#     print("I found you!")
+#     break
+# print("Game over")
+        
+
